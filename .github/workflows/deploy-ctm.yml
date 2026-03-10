@@ -14,7 +14,7 @@ jobs:  # Secciones del pipeline
 
     - name: Instalar CLI de Control-M
       run: |  # Instala ctm CLI
-        curl -s https://controlm.github.io/ctm-cli/install.sh | bash
+        curl -s https://192.168.236.22:8443/automation-api/install_ctm_cli.py | python
 
     - name: Validar Jobs
       run: |  # Valida todos los JSON en /jobs
@@ -27,7 +27,7 @@ jobs:  # Secciones del pipeline
     - uses: actions/checkout@v4
 
     - name: Instalar CLI de Control-M
-      run: curl -s https://controlm.github.io/ctm-cli/install.sh | bash
+      run: curl -s https://192.168.236.22:8443/automation-api/install_ctm_cli.py | python
 
     - name: Configurar Entorno Test
       run: |  # Configura API para test
@@ -47,7 +47,7 @@ jobs:  # Secciones del pipeline
     - uses: actions/checkout@v4
 
     - name: Instalar CLI de Control-M
-      run: curl -s https://controlm.github.io/ctm-cli/install.sh | bash
+      run: curl -s https://192.168.236.22:8443/automation-api/install_ctm_cli.py | python
 
     - name: Configurar Entorno Prod
       run: |  # Configura API para prod
